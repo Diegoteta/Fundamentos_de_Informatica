@@ -1,3 +1,5 @@
+#Este scrip fue ehcho porr Diego Suarez Ladero, lo hice solo ya que no pude enconmtrar pareja.
+
 #Crear menu 
 menu=['1) Cargar el catálogo desde archivo','2) Listar materiales disponibles','3) Obtener tamaño medio de los materiales'
       ,'4) Obtener tamaño maximo','5) Obtener tamaño minimo','6) Añadir un nuevo material','7) Editar un material existente','8) Guardar catalogo a fichero','9) Salir']
