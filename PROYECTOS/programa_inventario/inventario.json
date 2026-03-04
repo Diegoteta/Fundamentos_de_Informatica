@@ -1,0 +1,44 @@
+[
+    {
+        "nombre": "Etanol 96%",
+        "tipo": "Reactivo",
+        "precio": 15.5,
+        "cantidad_stock": 10
+    },
+    {
+        "nombre": "Vaso de precipitados 250ml",
+        "tipo": "Vidrio",
+        "precio": 4.25,
+        "cantidad_stock": 25
+    },
+    {
+        "nombre": "Nanopartículas de Oro (Sol)",
+        "tipo": "Muestra",
+        "precio": 120.0,
+        "cantidad_stock": 3
+    },
+    {
+        "nombre": "Pipeta Pasteur",
+        "tipo": "Vidrio",
+        "precio": 0.5,
+        "cantidad_stock": 100
+    },
+    {
+        "nombre": "Ácido Sulfúrico",
+        "tipo": "Reactivo",
+        "precio": 22.0,
+        "cantidad_stock": 4
+    },
+    {
+        "nombre": "Agitador Magnético",
+        "tipo": "Equipo",
+        "precio": 350.0,
+        "cantidad_stock": 2
+    },
+    {
+        "nombre": "Placas de Petri",
+        "tipo": "Vidrio",
+        "precio": 1.2,
+        "cantidad_stock": 50
+    }
+]
