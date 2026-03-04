@@ -1,3 +1,20 @@
+def abrir_archivo(ruta):
+   
+    try: #ahorramos q se rompa si introducimos un archivo q no exista
+        with open(ruta,'r') as fichero:
+            nombres.clear() #limpiamos si abrimos archivo
+            tamaños.clear()
+            for linea in fichero:
+                lista_limpia = []
+                lista_limpia = linea.strip().split(',') #limpiamos de huecos
+                nombres.append(lista_limpia[0])
+                tamaños.append(float(lista_limpia[1]))        
+    except:
+        print('Asegurese de que el archivo existe o esta bien escrito.')
+def listar_materiales(nombres,tamaños):
+    print('-'*30)
+    print(f"{'MATERIALES':<15} | {'TAMAÑO':<15}") #guardamos15 huecos para los no,bres y 10 para los tamaños y los dividimos con una ralla
+    print('-'*30)
 def media_de_lista(lista):
     media = sum(lista)/len(lista)
     print('-'*30)
@@ -14,13 +31,18 @@ def numero_min(nombres,numeros):
 def extraer_numero(numero): # creamos una funcion para sacar el numero de cada par de datos
                 return numero[1]
 def add_nuevo_material(nombres,numeros):
-    nombres.append(input('Nuevo material : '))
-    numeros.append(input('Tamaño : '))
-    print('-'*30)
-    print(f"{'MATERIALES':<15} | {'TAMAÑO':<15}") #guardamos15 huecos para los no,bres y 10 para los tamaños y los dividimos con una ralla
-    print('-'*30)
-    for i in range(len(nombres)):
-        print(f"{nombres[i]:<15} | {numeros[i]:<10}")       
+    nuevo = input('Nuevo material : ')
+    nombres_minusculas = [n.lower() for n in nombres]
+
+    if nuevo.lower() in nombres_minusculas:
+        print(f"Error: El material '{nuevo}' ya existe en la lista.")
+    else:
+        nombres.append(nuevo)
+        numeros.append(input('Tamaño : '))
+        print(f"{'MATERIALES':<15} | {'TAMAÑO':<15}") #guardamos15 huecos para los no,bres y 10 para los tamaños y los dividimos con una ralla
+        print('-'*30)
+        for i in range(len(nombres)):
+            print(f"{nombres[i]:<15} | {numeros[i]:<10}")          
 def editacion(lista_a_editar): #no hace falta un return para actualizar la lista, ya ocurre en la propia funcion
     nombre_editar = input('Escriba el material a cambiar el tamaño : ')
                 
