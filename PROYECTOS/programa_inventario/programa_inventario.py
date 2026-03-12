@@ -1,5 +1,11 @@
+import modulo_cargar_json as funciones
+
 menu = ['1.Añadir un nuevo material','2.Buscar material','3.Actualizar stock','4.Filtrar for tipo','5.Calcular valor total','6.Alerta de reabastecimiento','7.Salir']
 k='caca'
+
+diccionario = funciones.abrir_json(r"C:\Users\Pc\Documents\UNI\2º-Cuatri\Fundamentos de Informática\RepositorioFundamentosInformatica\PROYECTOS\programa_inventario\inventario.json")
+lista_materiales = funciones.trans_material(diccionario)
+
 continua = True
 while continua :
     print('SISTEMA DE GESTIÓN DE LABORATORIO'); print('-'*30)

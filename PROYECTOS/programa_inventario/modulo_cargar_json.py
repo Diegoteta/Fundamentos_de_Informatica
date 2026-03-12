@@ -17,14 +17,9 @@ def trans_material(diccionario):
             elemento['nombre'], 
             elemento['tipo'], 
             elemento['precio'], 
-            elemento['cantidad_stock']
-        )
+            elemento['cantidad_stock'])
         lista.append(nuevo_objeto)
     return lista
-
-diccionario = abrir_json(r"C:\Users\Pc\Documents\UNI\2º-Cuatri\Fundamentos de Informática\RepositorioFundamentosInformatica\PROYECTOS\programa_inventario\inventario.json")
-lista_materiales = trans_material(diccionario)
-print(lista_materiales[1].tipo)
 
 
     
