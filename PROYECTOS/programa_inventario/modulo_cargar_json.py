@@ -20,6 +20,12 @@ def trans_a_objetos(diccionario):
             )
         lista.append(nuevo_objeto)
     return lista
+def trans_a_diccionario(objetos):
+    lista=[]
+    for elemento in objetos:
+        nuevo_diccionario = vars(elemento)
+        lista.append(nuevo_diccionario)
+    return lista
 def comprobacion_existencia(lista,nombre_buscado):
     nombre_minusculas = nombre_buscado.lower()
     for objeto in lista:
