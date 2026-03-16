@@ -1,11 +1,7 @@
-import modulo_cargar_json as funciones
-
+import modulo_cargar_json as f
 menu = ['1.Añadir un nuevo material','2.Buscar material','3.Actualizar stock','4.Filtrar for tipo','5.Calcular valor total','6.Alerta de reabastecimiento','7.Salir']
-k='caca'
-
-diccionario = funciones.abrir_json(r"C:\Users\Pc\Documents\UNI\2º-Cuatri\Fundamentos de Informática\RepositorioFundamentosInformatica\PROYECTOS\programa_inventario\inventario.json")
-lista_materiales = funciones.trans_material(diccionario)
-
+datos_crudos = f.abrir_json(r"C:\Users\Pc\Documents\UNI\2º-Cuatri\Fundamentos de Informática\RepositorioFundamentosInformatica\PROYECTOS\programa_inventario\inventario.json")
+inventario = f.trans_a_objetos(datos_crudos)
 continua = True
 while continua :
     print('SISTEMA DE GESTIÓN DE LABORATORIO'); print('-'*30)
@@ -13,26 +9,25 @@ while continua :
             print(n) 
     print('-'*30)
     try :
-        
         opcion = int(input('Seleccione una opción : '))
         print('-'*30)
         if opcion == 1:
-            print(k)
+            f.crear_elemento_inventario(inventario,f.Material)
             print('-'*30)
         elif opcion == 2:
-            print(k)
+            f.buscar_material(inventario)
             print('-'*30)
         elif opcion == 3:
-            print(k)
+            f.actualizar_stock(inventario)
             print('-'*30)
         elif opcion == 4:
-            print(k)
+            f.filtrar_por_tipo(inventario)
             print('-'*30)
         elif opcion == 5:
-            print(k)
+            suma = f.coste_total_inventario(inventario); print(f'El valor total del imventario es de {suma}€')
             print('-'*30)
         elif opcion == 6:
-            print(k)
+            f.alerta_abastecimiento(inventario)
             print('-'*30)
         elif opcion == 7:
             continua = False
