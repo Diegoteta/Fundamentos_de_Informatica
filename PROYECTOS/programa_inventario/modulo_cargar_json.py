@@ -1,3 +1,4 @@
+#Este código fue hecho por Alejandro Álvarez Vázquez y Diego Suárez Ladero
 import json
 class Material:
     def __init__(self,nombre,tipo,precio,cantidad_stock):

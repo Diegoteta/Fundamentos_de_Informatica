@@ -1,3 +1,4 @@
+#Este código fue hecho por Alejandro Álvarez Vázquez y Diego Suárez Ladero
 import modulo_cargar_json as f
 menu = ['1.Añadir un nuevo material','2.Buscar material','3.Actualizar stock','4.Filtrar for tipo','5.Calcular valor total','6.Alerta de reabastecimiento','7.Salir']
 datos_crudos = f.abrir_json(r"C:\Users\Pc\Documents\UNI\2º-Cuatri\Fundamentos de Informática\RepositorioFundamentosInformatica\PROYECTOS\programa_inventario\inventario.json")
